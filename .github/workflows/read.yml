@@ -9,7 +9,7 @@ jobs:
       - name: Get content from JSON file
         id: set_object
         run: |
-          content=`cat ../../app.json`
+          content=`cat app.json`
           echo "::$set-output name=appJson::$content"
 
       - name: Echo property from object
