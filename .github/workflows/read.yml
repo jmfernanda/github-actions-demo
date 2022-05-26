@@ -16,4 +16,4 @@ jobs:
           echo "::$set-output name=appJson::$content"
 
       - name: Echo property from object
-        run: echo "${{steps.set_object.outputs.appJson}}"
+        run: echo "${{fromJson(steps.set_object.outputs.appJson)}}"
