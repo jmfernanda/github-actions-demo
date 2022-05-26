@@ -1,0 +1,16 @@
+name: Test read JSON 
+on: workflow_dispatch
+
+jobs: 
+  readJob:
+    name: Test for using object from JSON file
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get content from JSON file
+        id: set_object
+        run: |
+          content=`cat ../../app.json`
+          echo "::$set-output name=appJson::$content"
+
+      - name: Echo property from object
+        run: echo "${{fromJson(steps.set_object.outputs.appJson).config}}"

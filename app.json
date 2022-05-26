@@ -1,0 +1,8 @@
+{
+ "config": {
+  "parameter_config": "Value from config parameter"
+ },
+ "enviroment": {
+  "parameter_env": "Value from parameter_env"
+ }
+}
