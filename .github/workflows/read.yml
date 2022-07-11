@@ -13,4 +13,4 @@ jobs:
           content=`cat app.json`
           echo "::set-output name=params::$content"
       - run: |
-          echo "${{fromJson(steps.set_var.outputs.params).version}}"
+          echo "${{fromJson(steps.set_var.outputs.params).config}}"
