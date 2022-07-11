@@ -16,4 +16,4 @@ jobs:
           path: "app.json"
 
       - name: File contents
-        run: echo "${{ steps.read_file.outputs.contents }}"
+        run: echo "${{ fromJson(steps.read_file.outputs.contents).config }}"
