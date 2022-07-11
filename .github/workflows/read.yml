@@ -16,6 +16,7 @@ jobs:
           content="${content//$'\n'/'%0A'}"
           content="${content//$'\r'/'%0D'}"
           # end of optional handling for multi line json
-          echo "::set-output name=app::$content"
+          echo "$content"
+          echo "::set-output name=params::$content"
       - run: |
-          echo "${{fromJson(steps.set_var.outputs.app).version}}"
+          echo "${{fromJson(steps.set_var.outputs.params).version}}"
