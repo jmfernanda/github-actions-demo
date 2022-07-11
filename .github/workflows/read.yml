@@ -11,6 +11,6 @@ jobs:
       - id: set_var
         run: |
           content=`cat app.json`
-          echo "::set-output name=params::$content"
+          echo "::set-output name=params::${{content}}"
       - run: |
           echo "${{fromJson(steps.set_var.outputs.params).config}}"
