@@ -1,5 +1,5 @@
 {
- "config": "config value"
+ "config": "config value",
  "enviroment": {
   "parameter_env": "Value from parameter_env"
  }
